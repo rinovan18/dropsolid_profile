@@ -1,0 +1,59 @@
+{
+  "name": "dropsolid-drupal8/dropsolid_rocketship_profile",
+  "description": "The installation profile for Dropsolid products.",
+  "type": "drupal-profile",
+  "authors": [
+    {
+      "name": "Kevin Van Belle",
+      "homepage": "https://www.drupal.org/u/kevinvb",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Brent Gees",
+      "homepage": "https://www.drupal.org/u/brentgees",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Nick Vanpraet",
+      "homepage": "https://www.drupal.org/u/grayle",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "drupal/console": "~1.0",
+    "drupal/devel": "~1.0",
+    "drupal/facets": "^1.0",
+    "drupal/views_exposed_filter_blocks": "^1.0",
+    "drupal/captcha": "1.x-dev#1d21e6864ced543312d8d819a170c3553281b485",
+    "drupal/recaptcha": "2.x-dev#7872a17f8c33c30e9eb941679ed1af222d83277a",
+    "drupal/field_hidden": "~1.0",
+    "drupal/reroute_email": "~1.0",
+    "drupal/search_api_solr": "3.0-alpha2",
+    "drupal/environment_indicator": "~3.0",
+    "drupal/memcache": "~2.0",
+    "drupal/dropsolid_purge": "1.0-beta1",
+    "drupal/purge": "3.0-beta8",
+    "drupal/webform_mailchimp": "^5.4",
+    "drupal/masquerade": "2.0-beta2",
+    "drupal/twig_xdebug": "~1.0",
+    "drupal/rabbit_hole": "1.0-beta4",
+    "drupal/chosen": "~2.5",
+    "drupal/allowed_formats": "~1.1",
+    "drupal/styleguide": "1.0-alpha3",
+    "drupal/stage_file_proxy": "1.0-alpha3",
+    "drupal/search_api_sorts": "1.0-beta1",
+    "drupal/geocoder": "^2.0",
+    "drupal/geofield": "^1.0",
+    "drupal/geofield_map": "~2.13",
+    "drupal/address": "^1.4",
+    "drupal/webform_views": "^5.0@alpha",
+    "drupal/display_field_copy": "^1.0",
+    "drupal/disable_language": "^1.0@beta",
+    "drupal/office_hours": "^1.1",
+    "drupal/rocketship_core": "1.x-dev",
+    "drupal/rocketship_paragraphs": "1.x-dev"
+  },
+  "support": {
+    "docs": "https://gitlab.com/dropsolid-drupal8/dropsolid_rocketship_profile"
+  }
+}

@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies: {  }
+id: webadmin
+label: 'Website administrator'
+weight: -8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access environment indicator'
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'administer users'
+  - 'assign roles'
+  - 'assign webadmin role'
+  - 'change own username'
+  - 'create content translations'
+  - 'create url aliases'
+  - 'delete content translations'
+  - 'masquerade as authenticated'
+  - 'schedule publishing of nodes'
+  - 'translate any entity'
+  - 'translate configuration'
+  - 'translate interface'
+  - 'update content translations'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view scheduled content'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view any unpublished content'
+  - 'access webform overview'
+  - 'access webform submission log'
+  - 'delete any webform submission'
+  - 'delete own webform submission'
+  - 'edit any webform submission'
+  - 'edit own webform submission'
+  - 'view any webform submission'
+  - 'view own webform submission'

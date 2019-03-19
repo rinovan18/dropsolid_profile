@@ -1,0 +1,8 @@
+ignored_config_entities:
+  0: 'webform.*'
+  2: 'system.action.webform_*'
+  3: simple_sitemap.custom
+  4: ~webform.webform.event_subscription
+  5: ~webform.webform.apply_for_this_job
+  6: recaptcha.settings.yml
+  7: ~webform.webform.office_contact

@@ -1,0 +1,7 @@
+name: 'Dropsolid Rocketship Drush'
+type: module
+description: 'Contains helpful, Rocketship-specific drush commands'
+core: 8.x
+package: Rocketship
+dependencies:
+  - config_split

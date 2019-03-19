@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies: {  }
+id: blacklist
+label: Blacklist
+folder: null
+module: {  }
+theme: {  }
+blacklist:
+  - 'webform.*'
+  - 'system.action.webform_*'
+  - simple_sitemap.custom
+  - recaptcha.settings.yml
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: false
+weight: 0
