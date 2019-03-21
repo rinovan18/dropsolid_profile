@@ -1,5 +1,5 @@
 {
-  "name": "dropsolid-drupal8/dropsolid_rocketship_profile",
+  "name": "drupal/dropsolid_rocketship_profile",
   "description": "The installation profile for Dropsolid products.",
   "type": "drupal-profile",
   "authors": [
@@ -54,6 +54,6 @@
     "drupal/rocketship_paragraphs": "1.x-dev"
   },
   "support": {
-    "docs": "https://gitlab.com/dropsolid-drupal8/dropsolid_rocketship_profile"
+    "docs": "https://drupal.org/project/dropsolid_rocketship_profile"
   }
 }
