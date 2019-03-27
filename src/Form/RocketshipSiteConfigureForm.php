@@ -28,11 +28,15 @@ class RocketshipSiteConfigureForm extends SiteConfigureForm {
     // successfully.)
     $post_params = $this->getRequest()->request->all();
     if (empty($post_params) && (!drupal_verify_install_file($this->root . '/' . $settings_file, FILE_EXIST | FILE_READABLE | FILE_NOT_WRITABLE) || !drupal_verify_install_file($this->root . '/' . $settings_dir, FILE_NOT_WRITABLE, 'dir'))) {
-      drupal_set_message(t('All necessary changes to %dir and %file have been made, so you should remove write permissions to them now in order to avoid security risks. If you are unsure how to do so, consult the <a href=":handbook_url">online handbook</a>.', [
-        '%dir' => $settings_dir,
-        '%file' => $settings_file,
-        ':handbook_url' => 'https://www.drupal.org/server-permissions',
-      ]), 'warning');
+      drupal_set_message(
+        t(
+            'All necessary changes to %dir and %file have been made, so you should remove write permissions to them now in order to avoid security risks. If you are unsure how to do so, consult the <a href=":handbook_url">online handbook</a>.', [
+              '%dir' => $settings_dir,
+              '%file' => $settings_file,
+              ':handbook_url' => 'https://www.drupal.org/server-permissions',
+            ]
+        ), 'warning'
+      );
     }
 
     $form['#attached']['library'][] = 'system/drupal.system';
@@ -108,7 +112,7 @@ class RocketshipSiteConfigureForm extends SiteConfigureForm {
     $form['regional_settings']['date_default_timezone'] = [
       '#type' => 'select',
       '#title' => $this->t('Default time zone'),
-      // Use system timezone if set, but avoid throwing a warning in PHP >=5.4.
+       // Use system timezone if set, but avoid throwing a warning in PHP >=5.4.
       '#default_value' => $this->config('system.date')->get('timezone.default'),
       '#options' => system_time_zones(NULL, TRUE),
       '#description' => $this->t('By default, dates in this site will be displayed in the chosen time zone.'),

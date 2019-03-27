@@ -2,8 +2,7 @@
 
 /**
  * @file
- * Enables modules and site configuration for a dropsolid_rocketship_profile
- *   installation.
+ * Profile main file.
  */
 
 use Drupal\Component\Render\FormattableMarkup;
@@ -143,6 +142,18 @@ function dropsolid_rocketship_profile_postpone_messages() {
 
   // Save all messages to output them at the end.
   foreach ($messages as $type => $list) {
+    foreach ($list as $idx => $message) {
+      $needles = [
+        'This site has only a single language enabled',
+        'Enable translation for content types',
+      ];
+      foreach ($needles as $needle) {
+        $message = strip_tags((string) $message);
+        if (strpos($message, $needle) === 0) {
+          unset($list[$idx]);
+        }
+      }
+    }
     if (!isset($_SESSION['install_state']['dropsolid_rocketship_profile']['saved_messages'][$type])) {
       $_SESSION['install_state']['dropsolid_rocketship_profile']['saved_messages'][$type] = [];
     }
@@ -384,7 +395,7 @@ function dropsolid_after_install_finished(array &$install_state) {
       '#type' => 'container',
       'congratulations' => [
         '#markup' => new FormattableMarkup('<p>' .
-          t('Congratulations, you have successfully installed Dropsolid Profile') .
+          t('Congratulations, you have successfully installed Dropsolid Rocketship Profile') .
           '</p>', []),
       ],
       'drush_info' => [
@@ -419,7 +430,7 @@ function dropsolid_after_install_finished(array &$install_state) {
       ],
     ];
 
-    foreach ($messages as $idx => $message) {
+    foreach ($messages as $message) {
       // For some reason <front> turns into /core/install.php during
       // installation so replace that part and reinsert into
       // FormattableMarkup else it'll escape any HTML.

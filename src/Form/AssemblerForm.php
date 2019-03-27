@@ -4,6 +4,7 @@ namespace Drupal\dropsolid_rocketship_profile\Form;
 
 use Drupal\Core\Extension\InfoParserInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\Extension\ThemeHandlerInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslationInterface;
@@ -40,6 +41,13 @@ class AssemblerForm extends FormBase {
   protected $moduleHandler;
 
   /**
+   * The theme handler service.
+   *
+   * @var \Drupal\Core\Extension\ThemeHandlerInterface
+   */
+  protected $themeHandler;
+
+  /**
    * Assembler Form constructor.
    *
    * @param string $root
@@ -50,12 +58,15 @@ class AssemblerForm extends FormBase {
    *   The string translation service.
    * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
    *   The Module Handler service.
+   * @param \Drupal\Core\Extension\ThemeHandlerInterface $themeHandler
+   *   The Theme Handler service.
    */
-  public function __construct($root, InfoParserInterface $info_parser, TranslationInterface $translator, ModuleHandlerInterface $module_handler) {
+  public function __construct($root, InfoParserInterface $info_parser, TranslationInterface $translator, ModuleHandlerInterface $module_handler, ThemeHandlerInterface $themeHandler) {
     $this->root = $root;
     $this->infoParser = $info_parser;
     $this->stringTranslation = $translator;
     $this->moduleHandler = $module_handler;
+    $this->themeHandler = $themeHandler;
   }
 
   /**
@@ -66,8 +77,8 @@ class AssemblerForm extends FormBase {
       $container->get('app.root'),
       $container->get('info_parser'),
       $container->get('string_translation'),
-      $container->get('module_handler')
-
+      $container->get('module_handler'),
+      $container->get('theme_handler')
     );
   }
 
@@ -150,8 +161,6 @@ class AssemblerForm extends FormBase {
       }
     }
 
-    /** @var \Drupal\Core\Extension\ThemeHandlerInterface $themeHandler */
-    $themeHandler = \Drupal::service('theme_handler');
     $form['theme_wrapper'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Site theme'),
@@ -166,7 +175,7 @@ class AssemblerForm extends FormBase {
       '#default_value' => 'bartik',
     ];
 
-    $themes = $themeHandler->rebuildThemeData();
+    $themes = $this->themeHandler->rebuildThemeData();
     foreach ($themes as $filename => $theme) {
       $form['theme_wrapper']['theme']['#options'][$filename] = $theme->info['name'] . '<br/><div class="description">' . $theme->info['description'] . '</div>';
       if ($filename == 'dropsolid_starter') {
@@ -232,5 +241,3 @@ class AssemblerForm extends FormBase {
   }
 
 }
-
-

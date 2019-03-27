@@ -42,7 +42,6 @@ function drush_dropsolid_rocketship_drush_dropsolid_config_setup() {
   /** @var \Drupal\Core\Config\CachedStorage $config_storage */
   $config_storage = \Drupal::service('config.storage');
 
-
   // Before we start ex/importing things, we need to make sure the directories
   // exist for *every* split. If this command fails half-way through it can
   // mess up your splits something fierce.

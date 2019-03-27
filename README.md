@@ -8,7 +8,7 @@ so give them a look: https://www.drupal.org/project/varbase
 - has option to select extra languages during install
     - can also be done with drush, add following to your drush si command
     - select your default language with the `--locale=LANG` option
-    - `dropsolid_rocketship_profile_multilingual_configuration.enable_multilingual=1
+    - `dropsolid_rocketship_profile_multilingual_configuration.enable_multilingual=1`
     - `dropsolid_rocketship_profile_multilingual_configuration.multilingual_languages.LANG=LANG`
     for every extra language
 - has option to enable some of our own features during install

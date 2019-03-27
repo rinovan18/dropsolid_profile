@@ -11,8 +11,8 @@ use Drupal\Core\Language\LanguageManager;
 /**
  * ConfigureMultilingualForm class.
  *
- * Defines form for selecting dropsolid_rocketship_profile's Multilingual configuration
- * options form.
+ * Defines form for selecting dropsolid_rocketship_profile's Multilingual
+ * configuration options form.
  */
 class ConfigureMultilingualForm extends FormBase {
 
@@ -57,7 +57,7 @@ class ConfigureMultilingualForm extends FormBase {
     }
 
     asort($select_options);
-    $default_langcode = \Drupal::configFactory()
+    $default_langcode = $this->configFactory()
       ->getEditable('system.site')
       ->get('default_langcode');
 
@@ -87,7 +87,7 @@ class ConfigureMultilingualForm extends FormBase {
 
     $form['enable_multilingual'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Enable multiple languages for this site'),
+      '#title' => $this->t('Set up multiple languages for this site'),
       '#description' => $this->t('Select extra languages to enable for your site.'),
       '#default_value' => FALSE,
     ];
