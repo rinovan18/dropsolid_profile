@@ -50,8 +50,8 @@
     "drupal/display_field_copy": "^1.0",
     "drupal/disable_language": "^1.0@beta",
     "drupal/office_hours": "^1.1",
-    "drupal/rocketship_core": "1.x-dev",
-    "drupal/rocketship_paragraphs": "1.x-dev"
+    "drupal/rocketship_core": "^1.0",
+    "drupal/rocketship_paragraphs": "^1.0"
   },
   "support": {
     "docs": "https://drupal.org/project/dropsolid_rocketship_profile"
