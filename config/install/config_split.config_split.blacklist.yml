@@ -11,6 +11,7 @@ blacklist:
   - 'system.action.webform_*'
   - simple_sitemap.custom
   - recaptcha.settings.yml
+  - google_tag.settings
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: false

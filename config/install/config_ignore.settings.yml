@@ -6,3 +6,4 @@ ignored_config_entities:
   5: ~webform.webform.apply_for_this_job
   6: recaptcha.settings.yml
   7: ~webform.webform.office_contact
+  8: google_tag.settings
