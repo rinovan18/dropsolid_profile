@@ -12,6 +12,7 @@ blacklist:
   - simple_sitemap.custom
   - recaptcha.settings.yml
   - google_tag.settings
+  - simple_sitemap.settings
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: false
