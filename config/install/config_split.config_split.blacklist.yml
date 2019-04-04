@@ -9,7 +9,7 @@ theme: {  }
 blacklist:
   - 'webform.*'
   - 'system.action.webform_*'
-  - simple_sitemap.custom
+  - simple_sitemap.custom_links.default
   - recaptcha.settings.yml
   - google_tag.settings
   - simple_sitemap.settings
