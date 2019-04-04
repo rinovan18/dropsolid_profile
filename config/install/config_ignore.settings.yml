@@ -5,6 +5,6 @@ ignored_config_entities:
   3: simple_sitemap.custom_links.default
   4: ~webform.webform.event_subscription
   5: ~webform.webform.apply_for_this_job
-  6: recaptcha.settings.yml
+  6: recaptcha.settings
   7: ~webform.webform.office_contact
   8: google_tag.settings
