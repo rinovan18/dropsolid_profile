@@ -3,16 +3,16 @@ description: 'The Dropsolid Rocketship installation profile.'
 type: profile
 core: 8.x
 dependencies:
-  - chosen
-  - rocketship_core
-  - dropsolid_rocketship_drush
-  - environment_indicator
-  - system
-  - action
-  - user
-  - node
-  - block
-  - recaptcha
+  - chosen:chosen
+  - rocketship_core:rocketship_core
+  - dropsolid_rocketship_profile:dropsolid_rocketship_drush
+  - environment_indicator:environment_indicator
+  - drupal:system
+  - drupal:action
+  - drupal:user
+  - drupal:node
+  - drupal:block
+  - recaptcha:recaptcha
 themes:
   - bartik
   - seven
