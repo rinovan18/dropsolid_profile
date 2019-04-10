@@ -39,7 +39,7 @@ abstract class DropsolidBrowserTestBase extends BrowserTestBase {
   }
 
   /**
-   * Tests that the webadmin can not edit the super admin.
+   * Login as webadmin.
    */
   public function drupalLoginAsWebAdmin() {
     // Create and log in as webadmin. Always uid 2 with our profile.
