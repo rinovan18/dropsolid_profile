@@ -14,6 +14,7 @@ use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\dropsolid_rocketship_profile\Form\AssemblerForm;
 use Drupal\dropsolid_rocketship_profile\Form\ConfigureMultilingualForm;
 use Drupal\dropsolid_rocketship_profile\Form\RocketshipSiteConfigureForm;
+use Drupal\dropsolid_rocketship_profile\Form\ThemeGeneratorForm;
 
 /**
  * Implements hook_install_tasks_alter().
@@ -48,6 +49,12 @@ function dropsolid_rocketship_profile_install_tasks(&$install_state) {
       'display_name' => t('Configure multilingual'),
       'display' => $needs_configure_multilingual,
       'type' => 'batch',
+    ],
+    'dropsolid_rocketship_profile_generate_theme' => [
+      'display_name' => t('Generate a theme'),
+      'display' => TRUE,
+      'type' => 'form',
+      'function' => ThemeGeneratorForm::class,
     ],
     'dropsolid_rocketship_profile_extra_components' => [
       'display_name' => t('Extra components'),

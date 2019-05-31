@@ -51,7 +51,8 @@
     "drupal/disable_language": "^1.0@beta",
     "drupal/office_hours": "^1.1",
     "drupal/rocketship_core": "^1.0",
-    "drupal/rocketship_paragraphs": "^1.0"
+    "drupal/rocketship_paragraphs": "^1.0",
+    "dropsolid/rocketship_theme": "^1.0.0-alpha3"
   },
   "support": {
     "docs": "https://drupal.org/project/dropsolid_rocketship_profile"

@@ -13,6 +13,7 @@ dependencies:
   - drupal:node
   - drupal:block
   - recaptcha:recaptcha
+  - rocketship_theme_generator
 themes:
   - bartik
   - seven
