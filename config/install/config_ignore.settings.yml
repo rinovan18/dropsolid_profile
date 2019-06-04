@@ -8,3 +8,7 @@ ignored_config_entities:
   6: recaptcha.settings
   7: ~webform.webform.office_contact
   8: google_tag.settings
+  9: geofield_map.settings
+  10: geocoder.settings
+  11: recaptcha.settings
+  
