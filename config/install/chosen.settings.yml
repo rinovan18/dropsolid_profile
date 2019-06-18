@@ -11,6 +11,7 @@ placeholder_text_single: 'Choose an option'
 no_results_text: 'No results match'
 disabled_themes:
   seven: '0'
+  claro: '0'
 # Set to be included everywhere so it gets included during installation
 # Gets set to the correct '0' value in the final install task
 chosen_include: 2

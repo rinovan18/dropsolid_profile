@@ -15,7 +15,7 @@ dependencies:
   - recaptcha:recaptcha
 themes:
   - bartik
-  - seven
+  - claro
 package: Rocketship
 distribution:
   name: 'Dropsolid Rocketship Profile'
