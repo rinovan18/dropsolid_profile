@@ -36,7 +36,7 @@
     "drupal/webform_mailchimp": "^5.4",
     "drupal/masquerade": "2.0-beta2",
     "drupal/twig_xdebug": "~1.0",
-    "drupal/rabbit_hole": "1.0-beta4",
+    "drupal/rabbit_hole": "1.0-beta6",
     "drupal/chosen": "~2.5",
     "drupal/allowed_formats": "~1.1",
     "drupal/styleguide": "1.0-alpha3",
