@@ -14,6 +14,8 @@ module:
   purge_processor_lateruntime: 0
   purge_queuer_coretags: 0
   memcache: 0
+  imageapi_optimize: 0
+  imageapi_optimize_binaries: 0
 theme: {  }
 blacklist:
   - advagg.settings

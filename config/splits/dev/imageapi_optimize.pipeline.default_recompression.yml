@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - imageapi_optimize_binaries
+name: default_recompression
+label: 'default recompression'
+processors:
+  439e0cc4-828e-4f4c-9a95-91ccfa2311a9:
+    uuid: 439e0cc4-828e-4f4c-9a95-91ccfa2311a9
+    id: optipng
+    weight: 1
+    data:
+      manual_executable_path: /usr/bin/optipng
+      level: 5
+      interlace: false
+  54c2787f-f888-4a00-8f4c-8000e1a7f78b:
+    uuid: 54c2787f-f888-4a00-8f4c-8000e1a7f78b
+    id: jpegoptim
+    weight: 2
+    data:
+      manual_executable_path: /usr/bin/jpegoptim
+      progressive: false
+      quality: 85
+      size: 85

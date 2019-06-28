@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - imageapi_optimize_binaries
+name: lossless_recompression
+label: 'Lossless recompression'
+processors:
+  5f7a6033-73e9-4cbd-ad2d-632261569463:
+    uuid: 5f7a6033-73e9-4cbd-ad2d-632261569463
+    id: optipng
+    weight: 1
+    data:
+      manual_executable_path: /usr/bin/optipng
+      level: 5
+      interlace: false

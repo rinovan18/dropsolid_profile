@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - imageapi_optimize_binaries
+name: lossy_recompression
+label: 'Lossy recompression'
+processors:
+  c95b821a-0a65-47cc-aceb-2d57605f9205:
+    uuid: c95b821a-0a65-47cc-aceb-2d57605f9205
+    id: jpegoptim
+    weight: 1
+    data:
+      manual_executable_path: jpegoptim
+      progressive: true
+      quality: 85
+      size: null
