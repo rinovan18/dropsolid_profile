@@ -195,9 +195,7 @@ function dropsolid_rocketship_profile_enable_language($language_code) {
  * @throws \Drupal\Core\Entity\EntityStorageException
  */
 function dropsolid_rocketship_profile_fix_entity_update($entity_update) {
-  if ($entity_update) {
-    \Drupal::entityDefinitionUpdateManager()->applyUpdates();
-  }
+  // Removed call to deprecated function. Should no longer be needed either.
 }
 
 /**
