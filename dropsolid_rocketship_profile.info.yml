@@ -13,6 +13,7 @@ dependencies:
   - drupal:node
   - drupal:block
   - recaptcha:recaptcha
+  - r4032login:r4032login
 themes:
   - bartik
   - seven
