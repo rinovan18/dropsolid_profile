@@ -59,5 +59,39 @@
   },
   "support": {
     "docs": "https://drupal.org/project/dropsolid_rocketship_profile"
+  },
+  "extra": {
+    "patches": {
+      "drupal/core": {
+        "Support priority for needs_destruction service tag": "https://www.drupal.org/files/issues/2019-03-06/support-priority-for-need_destruction-tag.patch",
+        "Toolbar's renderPlain() is incompatible with dynamic page cache": "https://www.drupal.org/files/issues/2019-01-25/2949457-28.patch",
+        "Contextual links can't handle multiple occurrences of the same contextual links (again) https://www.drupal.org/project/drupal/issues/2891603": "https://www.drupal.org/files/issues/2018-10-18/2891603.16.patch",
+        "Exposed term filter is not updated when terms are added, deleted, or rearranged  https://www.drupal.org/project/drupal/issues/2900248": "https://www.drupal.org/files/issues/2019-05-07/2900248-16.patch",
+        "Allow states to check and uncheck checkboxes and radio buttons": "https://www.drupal.org/files/issues/drupal-994360-74-states-checkboxes-checked.patch",
+        "Allow Views pages to be marked as admin page": "https://www.drupal.org/files/issues/2018-09-01/2719797-69.patch",
+        "Fix datetime widget descriptions": "https://www.drupal.org/files/issues/2019-03-16/2791693-38.patch",
+        "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch"
+      },
+      "drupal/purge": {
+        "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2019-03-06/3008776.add-priority-to-needs_destruct.patch"
+      },
+      "drupal/captcha": {
+        "patch to bring captcha module up to dev#1d21e6864ced543312d8d819a170c3553281b485": "etc/patches/captcha-dev1d21e6864ced543312d8d819a170c3553281b485.patch",
+        "don't set $_SESSION unless needed - https://www.drupal.org/project/captcha/issues/2996495": "https://www.drupal.org/files/issues/2018-08-31/captcha.no-needless-sessions-2.patch"
+      },
+      "drupal/display_field_copy": {
+        "Allow different formatter settings for copied field": "https://www.drupal.org/files/issues/display_field_copy-no-widget-field-settings-2822398-10.patch",
+        "Fix undefined index for disabled field": "https://www.drupal.org/files/issues/display_field_copy-2910523-undefined-index-formatter.patch"
+      },
+      "drupal/facets": {
+        "Hide facets when it is configured to hide the block - https://www.drupal.org/node/2984465": "https://www.drupal.org/files/issues/2019-04-08/facets-empty-block-2984465-26.patch"
+      },
+      "drupal/imageapi_optimize_binaries": {
+        "Make tests run: PHP unit tests fail to run, due to the namespace not matching the module name - https://www.drupal.org/project/imageapi_optimize_binaries/issues/3017115": "https://www.drupal.org/files/issues/2018-11-30/0001-Use-correct-namespace-so-classes-can-be-found.patch"
+      },
+      "drupal/r4032login": {
+        "Add cache tags to redirect": "https://www.drupal.org/files/issues/2019-03-13/2941064-20.patch"
+      }
+    }
   }
 }
