@@ -75,10 +75,6 @@
       "drupal/purge": {
         "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2019-03-06/3008776.add-priority-to-needs_destruct.patch"
       },
-      "drupal/captcha": {
-        "patch to bring captcha module up to dev#1d21e6864ced543312d8d819a170c3553281b485": "etc/patches/captcha-dev1d21e6864ced543312d8d819a170c3553281b485.patch",
-        "don't set $_SESSION unless needed - https://www.drupal.org/project/captcha/issues/2996495": "https://www.drupal.org/files/issues/2018-08-31/captcha.no-needless-sessions-2.patch"
-      },
       "drupal/display_field_copy": {
         "Allow different formatter settings for copied field": "https://www.drupal.org/files/issues/display_field_copy-no-widget-field-settings-2822398-10.patch",
         "Fix undefined index for disabled field": "https://www.drupal.org/files/issues/display_field_copy-2910523-undefined-index-formatter.patch"
