@@ -59,6 +59,8 @@
     "drupal/r4032login": "^1.0",
     "drupal/embed": "^1.0",
     "drupal/entity_embed": "^1.0",
+    "drupal/blazy": "2.0-rc3",
+    "vardot/blazy": "~1.8",
     "drupal/menu_link_attributes": "^1.0"
   },
   "support": {
