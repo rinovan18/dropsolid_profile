@@ -14,8 +14,6 @@ dependencies:
   - drupal:block
   - recaptcha:recaptcha
   - r4032login:r4032login
-  - drupal:embed
-  - drupal:entity_embed
 themes:
   - bartik
   - seven

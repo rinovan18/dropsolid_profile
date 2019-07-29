@@ -55,11 +55,7 @@
     "drupal/imageapi_optimize_resmushit": "^1.0",
     "drupal/rocketship_core": "^2.0",
     "drupal/rocketship_paragraphs": "^2.0",
-    "drupal/r4032login": "^1.0",
-    "drupal/embed": "^1.0",
-    "drupal/entity_embed": "^1.0",
-    "drupal/blazy": "2.0-rc3",
-    "vardot/blazy": "~1.8"
+    "drupal/r4032login": "^1.0"
   },
   "support": {
     "docs": "https://drupal.org/project/dropsolid_rocketship_profile"
