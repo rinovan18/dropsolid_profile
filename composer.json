@@ -75,9 +75,6 @@
       "drupal/purge": {
         "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2019-03-06/3008776.add-priority-to-needs_destruct.patch"
       },
-      "drupal/display_field_copy": {
-        "Fix undefined index for disabled field": "https://www.drupal.org/files/issues/display_field_copy-2910523-undefined-index-formatter.patch"
-      },
       "drupal/facets": {
         "Hide facets when it is configured to hide the block - https://www.drupal.org/node/2984465": "https://www.drupal.org/files/issues/2019-04-08/facets-empty-block-2984465-26.patch"
       },
