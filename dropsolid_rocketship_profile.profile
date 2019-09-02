@@ -51,8 +51,7 @@ function dropsolid_rocketship_profile_install_tasks(&$install_state) {
       'type' => 'batch',
     ],
     'dropsolid_rocketship_profile_configure_default_content_default_language' => [
-      'display_name' => t('Default Content Default Language'),
-      'display' => $needs_configure_multilingual,
+      'display_name' => t('Configure Default Content Default Language'),
       'type' => 'form',
       'function' => DefaultContentDefaultLanguage::class,
     ],

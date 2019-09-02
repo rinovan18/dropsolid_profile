@@ -98,7 +98,7 @@ class AssemblerForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
     $form['#title'] = $this->t('Extra components');
     $form['extra_components_introduction'] = [
-      '#weight' => -1,
+      '#weight' => -999,
       '#prefix' => '<p>',
       '#markup' => $this->t("Install additional ready-to-use components for your site."),
       '#suffix' => '</p>',
@@ -123,6 +123,7 @@ class AssemblerForm extends FormBase {
         '#type' => 'fieldset',
         '#title' => $module->info['group'],
         '#tree' => FALSE,
+        '#weight' => isset($module->info['weight']) ? $module->info['weight'] : 0,
       ];
       // Add the module itself as the first module.
       $form[$filename . '_wrapper']['extra_features'][$filename] = [
@@ -165,6 +166,7 @@ class AssemblerForm extends FormBase {
       '#type' => 'fieldset',
       '#title' => $this->t('Site theme'),
       '#tree' => FALSE,
+      '#weight' => 50,
     ];
     $form['theme_wrapper']['theme'] = [
       '#type' => 'radios',
@@ -176,7 +178,11 @@ class AssemblerForm extends FormBase {
     ];
 
     $themes = $this->themeHandler->rebuildThemeData();
+    $excluded = ['seven', 'classy', 'stark', 'stable'];
     foreach ($themes as $filename => $theme) {
+      if (in_array($filename, $excluded)) {
+        continue;
+      }
       $form['theme_wrapper']['theme']['#options'][$filename] = $theme->info['name'] . '<br/><div class="description">' . $theme->info['description'] . '</div>';
       if ($filename == 'dropsolid_starter') {
         $form['theme_wrapper']['theme']['#default_value'] = 'dropsolid_starter';
@@ -190,7 +196,7 @@ class AssemblerForm extends FormBase {
         '#button_type' => 'primary',
       ],
       '#type' => 'actions',
-      '#weight' => 5,
+      '#weight' => 999,
     ];
 
     return $form;
