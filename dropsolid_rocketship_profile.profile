@@ -6,6 +6,7 @@
  */
 
 use Drupal\Component\Render\FormattableMarkup;
+use Drupal\rocketship_core\Form\DefaultContentDefaultLanguage;
 use Drupal\views\Views;
 use Drupal\Core\Entity\EntityStorageException;
 use Drupal\webform\Entity\Webform;
@@ -48,6 +49,12 @@ function dropsolid_rocketship_profile_install_tasks(&$install_state) {
       'display_name' => t('Configure multilingual'),
       'display' => $needs_configure_multilingual,
       'type' => 'batch',
+    ],
+    'dropsolid_rocketship_profile_configure_default_content_default_language' => [
+      'display_name' => t('Default Content Default Language'),
+      'display' => $needs_configure_multilingual,
+      'type' => 'form',
+      'function' => DefaultContentDefaultLanguage::class,
     ],
     'dropsolid_rocketship_profile_extra_components' => [
       'display_name' => t('Extra components'),
@@ -240,7 +247,6 @@ function dropsolid_rocketship_profile_assemble_extra_components(array &$install_
  * @param string $theme
  *   Theme name.
  *
- * @throws \Drupal\Core\Entity\EntityStorageException
  */
 function dropsolid_rocketship_profile_install_theme($theme) {
   \Drupal::service('theme_installer')->install([$theme]);
@@ -249,41 +255,6 @@ function dropsolid_rocketship_profile_install_theme($theme) {
   \Drupal::configFactory()->getEditable('system.theme')
     ->set('default', $theme)
     ->save();
-
-  // Set up the language switcher if multilang.
-  $regions = system_region_list($theme);
-  if (empty($regions)) {
-    // No regions, no block.
-    return;
-  }
-  elseif (isset($regions['header_top'])) {
-    $region = 'header_top';
-  }
-  elseif (isset($regions['header'])) {
-    $region = 'header';
-  }
-  else {
-    $regionKeys = array_keys($regions);
-    $region = reset($regionKeys);
-  }
-
-  if (\Drupal::languageManager()->isMultilingual()) {
-    $values = [
-      'id' => 'languageswitcher',
-      'theme' => $theme,
-      'region' => $region,
-      'plugin' => 'language_block:language_interface',
-      'weight' => 3,
-      'settings' => [
-        'label' => 'Language switcher',
-        'label_display' => 0,
-      ],
-      'visibility' => [],
-    ];
-
-    $block = Block::create($values);
-    $block->save();
-  }
 }
 
 /**
