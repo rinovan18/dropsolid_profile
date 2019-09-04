@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dropsolid_blocks
+id: dropsolid_demo_config_socials
+migration_group: dropsolid_demo_config_migrates
+label: null
+source:
+  plugin: csv
+  path: /assets/csv/socials.csv
+  header_row_count: 1
+  keys:
+    - id
+process:
+  langcode:
+    plugin: callback
+    callable: rocketship_core_get_default_content_default_language
+  info: title
+  uuid: uuid
+  'field_social_link_facebook/uri': field_social_link_facebook
+  'field_social_link_twitter/uri': field_social_link_twitter
+  'field_social_link_instagram/uri': field_social_link_instagram
+  'field_social_link_linkedin/uri': field_social_link_linkedin
+destination:
+  plugin: 'entity:block_content'
+  default_bundle: social_media
+migration_dependencies: { }

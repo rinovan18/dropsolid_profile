@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dropsolid_blocks
+id: dropsolid_demo_config_site_branding
+migration_group: dropsolid_demo_config_migrates
+label: null
+source:
+  plugin: csv
+  path: /assets/csv/site_branding.csv
+  header_row_count: 1
+  keys:
+    - id
+process:
+  langcode:
+    plugin: callback
+    callable: rocketship_core_get_default_content_default_language
+  info: title
+  uuid: uuid
+  field_info_image:
+    plugin: migration_lookup
+    migration: dropsolid_demo_config_images
+    source: field_info_image
+  'body/value':
+    plugin: token_replacer
+    source: body
+  'body/format':
+    plugin: default_value
+    default_value: full_html
+destination:
+  plugin: 'entity:block_content'
+  default_bundle: site_branding
+migration_dependencies:
+  required:
+    - dropsolid_demo_config_p_002
+    - dropsolid_demo_config_images
+  optional: {  }

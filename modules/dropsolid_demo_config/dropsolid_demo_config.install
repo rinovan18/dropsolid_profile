@@ -1,0 +1,108 @@
+<?php
+
+use Drupal\block\Entity\Block;
+use Drupal\migrate\MigrateExecutable;
+
+/**
+ * Implements hook_install().
+ */
+function dropsolid_demo_config_install() {
+
+  $migrations = _dropsolid_demo_config_migrates();
+
+  $migrationManager = \Drupal::service('plugin.manager.migration');
+  try {
+    foreach ($migrations as $name) {
+      $migration = $migrationManager->createInstance($name);
+      if ($migration) {
+        $executable = new MigrateExecutable($migration);
+        $executable->import();
+      }
+    }
+
+    \Drupal::messenger()
+      ->addMessage(t('Migrated the Rocketship Paragraphs Content content.'));
+
+    $config = \Drupal::config('system.theme');
+    $theme = $config->get('default');
+    /** @var \Drupal\Core\Extension\ThemeHandlerInterface $handler */
+    $handler = Drupal::service('theme_handler');
+    $info = $handler->getTheme($theme);
+    $regions = system_region_list($theme);
+
+    if (isset($regions['doormat_03'])) {
+      Rocketship::placeBlock('block_content:55da64d2-ed75-4038-9df0-8ec57fb06516', [
+          'region' => 'doormat_03',
+          'theme' => $info->getName(),
+          'label' => 'Social',
+          'provider' => 'block_content',
+          'label_display' => 'visible',
+          'status' => TRUE,
+          'info' => '',
+          'id' => 'socials-55da64d2-ed75-4038-9df0-8ec57fb06516',
+        ]
+      );
+    }
+
+    if (isset($regions['doormat'])) {
+      Rocketship::placeBlock('block_content:3fcb9e7e-22a2-49b4-bbad-08bd619bc81e', [
+          'region' => 'doormat',
+          'theme' => $info->getName(),
+          'label' => 'Site branding',
+          'provider' => 'block_content',
+          'label_display' => 0,
+          'status' => TRUE,
+          'info' => '',
+          'id' => 'sitebranding-3fcb9e7e-22a2-49b4-bbad-08bd619bc81e',
+        ]
+      );
+    }
+
+  }
+  catch (\Exception $e) {
+    \Drupal::messenger()
+      ->addError(t('Failed migrating Rocketship Paragraphs Content content.'));
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function dropsolid_demo_config_uninstall() {
+
+  $migrations = _dropsolid_demo_config_migrates();
+  $migrations = array_reverse($migrations);
+
+  $migrationManager = \Drupal::service('plugin.manager.migration');
+  try {
+    foreach ($migrations as $name) {
+      $migration = $migrationManager->createInstance($name);
+      if ($migration) {
+        $executable = new MigrateExecutable($migration);
+        $executable->rollback();
+      }
+      \Drupal::configFactory()
+        ->getEditable('migrate_plus.migration.' . $name)
+        ->delete();
+    }
+
+    \Drupal::messenger()
+      ->addMessage(t('Rolled back the Rocketship Paragraphs Content content.'));
+    \Drupal::messenger()
+      ->addMessage(t('Deleted the Rocketship Paragraphs Content Content migrations.'));
+
+    $block = Block::load('socials-55da64d2-ed75-4038-9df0-8ec57fb06516');
+    if ($block) {
+      $block->delete();
+    }
+
+    $block = Block::load('sitebranding-3fcb9e7e-22a2-49b4-bbad-08bd619bc81e');
+    if ($block) {
+      $block->delete();
+    }
+  }
+  catch (\Exception $e) {
+    \Drupal::messenger()
+      ->addError(t('Failed rolling back Rocketship Paragraphs Content content.'));
+  }
+}

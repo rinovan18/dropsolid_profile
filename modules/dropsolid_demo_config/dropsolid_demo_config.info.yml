@@ -1,0 +1,14 @@
+name: 'Dropsolid Rocketship Demo Config'
+type: module
+description: 'Contains configuration to specifically set up a Demo Site'
+core: 8.x
+package: Rocketship
+group: Demo Site
+weight: 30
+show_during_install: true
+dependencies:
+  - rocketship_core
+  - rocketship_content
+  - rocketship_paragraphs
+  - dropsolid_blocks
+  - config_rewrite

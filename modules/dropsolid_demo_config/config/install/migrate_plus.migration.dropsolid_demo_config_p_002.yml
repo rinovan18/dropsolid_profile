@@ -1,0 +1,30 @@
+dependencies:
+  enforced:
+    module:
+      - rocketship_paragraphs
+id: dropsolid_demo_config_p_002
+migration_group: dropsolid_demo_config_migrates
+source:
+  plugin: csv
+  path: /assets/csv/p_002.csv
+  header_row_count: 1
+  keys:
+    - id
+process:
+  langcode:
+    plugin: callback
+    callable: rocketship_core_get_default_content_default_language
+  field_p_002_layout_image: field_p_002_layout_image
+  field_p_image:
+    plugin: migration_lookup
+    migration: dropsolid_demo_config_images
+    source: field_p_image
+  'field_p_link/title': field_p_link_title
+  'field_p_link/uri': field_p_link_uri
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: p_002
+migration_dependencies:
+  required:
+    - dropsolid_demo_config_images
+  optional: {}

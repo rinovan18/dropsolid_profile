@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * Contains hardcoded list of migrates, for ease of use.
+ *
+ * @return array
+ */
+function _dropsolid_demo_config_migrates() {
+  return [
+    'dropsolid_demo_config_images',
+    'dropsolid_demo_config_p_002',
+    'dropsolid_demo_config_p_003',
+    'dropsolid_demo_config_blocks',
+    'dropsolid_demo_config_socials',
+    'dropsolid_demo_config_usp_block',
+    'dropsolid_demo_config_site_branding',
+  ];
+}
+
+/**
+ * Implements hook_migration_plugins_alter().
+ */
+function dropsolid_demo_config_migration_plugins_alter(&$definitions) {
+  $path = drupal_get_path('module', 'dropsolid_demo_config');
+
+  foreach (_dropsolid_demo_config_migrates() as $name) {
+    $definitions[$name]['source']['path'] = $path . $definitions[$name]['source']['path'];
+  }
+
+  $definitions['dropsolid_demo_config_images']['source']['constants']['source_base_path'] = $path . $definitions['dropsolid_demo_config_images']['source']['constants']['source_base_path'];
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ *
+ * Make sure we go after migrate_plus.
+ */
+function dropsolid_demo_config_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'migration_plugins_alter') {
+    $group = $implementations['dropsolid_demo_config'];
+    unset($implementations['dropsolid_demo_config']);
+    $implementations['dropsolid_demo_config'] = $group;
+  }
+}
