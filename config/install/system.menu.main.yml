@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: main
+label: 'Main navigation'
+description: 'Site section links'
+locked: true
+third_party_settings:
+  menu_clickthrough:
+    clickthrough_enabled: 1
