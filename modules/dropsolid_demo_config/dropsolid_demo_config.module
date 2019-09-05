@@ -41,4 +41,62 @@ function dropsolid_demo_config_module_implements_alter(&$implementations, $hook)
     unset($implementations['dropsolid_demo_config']);
     $implementations['dropsolid_demo_config'] = $group;
   }
+  if ($hook == 'themes_installed') {
+    $group = $implementations['dropsolid_demo_config'];
+    unset($implementations['dropsolid_demo_config']);
+    $implementations['dropsolid_demo_config'] = $group;
+  }
+}
+
+/**
+ * Implements hook_themes_installed().
+ */
+function dropsolid_demo_config_themes_installed($theme_list) {
+  /** @var \Drupal\Core\Extension\ThemeHandlerInterface $handler */
+  $handler = Drupal::service('theme_handler');
+
+  foreach ($theme_list as $theme) {
+    $info = $handler->getTheme($theme);
+    if (isset($info->info['package']) && $info->info['package'] == 'Rocketship Theme') {
+      dropsolid_demo_config_place_default_blocks($info);
+    }
+  }
+}
+
+/**
+ * Place our blocks in the correct region of the provided theme.
+ *
+ * @param \Drupal\Core\Extension\Extension $theme
+ *   Theme name.
+ */
+function dropsolid_demo_config_place_default_blocks($theme) {
+  $regions = $theme->info['regions'];
+
+  if (isset($regions['doormat_03'])) {
+    Rocketship::placeBlock('block_content:55da64d2-ed75-4038-9df0-8ec57fb06516', [
+        'region' => 'doormat_03',
+        'theme' => $theme->getName(),
+        'label' => 'Social',
+        'provider' => 'block_content',
+        'label_display' => 'visible',
+        'status' => TRUE,
+        'info' => '',
+        'id' => 'socials-55da64d2-ed75-4038-9df0-8ec57fb06516',
+      ]
+    );
+  }
+
+  if (isset($regions['doormat'])) {
+    Rocketship::placeBlock('block_content:3fcb9e7e-22a2-49b4-bbad-08bd619bc81e', [
+        'region' => 'doormat',
+        'theme' => $theme->getName(),
+        'label' => 'Site branding',
+        'provider' => 'block_content',
+        'label_display' => 0,
+        'status' => TRUE,
+        'info' => '',
+        'id' => 'sitebranding-3fcb9e7e-22a2-49b4-bbad-08bd619bc81e',
+      ]
+    );
+  }
 }

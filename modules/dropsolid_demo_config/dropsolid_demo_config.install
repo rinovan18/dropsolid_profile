@@ -23,41 +23,14 @@ function dropsolid_demo_config_install() {
     \Drupal::messenger()
       ->addMessage(t('Migrated the Rocketship Paragraphs Content content.'));
 
+    // Enable our default blocks when this module gets installed and one of our
+    // themes is already active at the time.
     $config = \Drupal::config('system.theme');
     $theme = $config->get('default');
     /** @var \Drupal\Core\Extension\ThemeHandlerInterface $handler */
     $handler = Drupal::service('theme_handler');
     $info = $handler->getTheme($theme);
-    $regions = system_region_list($theme);
-
-    if (isset($regions['doormat_03'])) {
-      Rocketship::placeBlock('block_content:55da64d2-ed75-4038-9df0-8ec57fb06516', [
-          'region' => 'doormat_03',
-          'theme' => $info->getName(),
-          'label' => 'Social',
-          'provider' => 'block_content',
-          'label_display' => 'visible',
-          'status' => TRUE,
-          'info' => '',
-          'id' => 'socials-55da64d2-ed75-4038-9df0-8ec57fb06516',
-        ]
-      );
-    }
-
-    if (isset($regions['doormat'])) {
-      Rocketship::placeBlock('block_content:3fcb9e7e-22a2-49b4-bbad-08bd619bc81e', [
-          'region' => 'doormat',
-          'theme' => $info->getName(),
-          'label' => 'Site branding',
-          'provider' => 'block_content',
-          'label_display' => 0,
-          'status' => TRUE,
-          'info' => '',
-          'id' => 'sitebranding-3fcb9e7e-22a2-49b4-bbad-08bd619bc81e',
-        ]
-      );
-    }
-
+    dropsolid_demo_config_place_default_blocks($info);
   }
   catch (\Exception $e) {
     \Drupal::messenger()
