@@ -8,8 +8,8 @@ variant_settings:
       status: true
       info: ''
       view_mode: full
-      region: content
-      weight: -99
+      region: visual
+      weight: -4
       uuid: d679bf78-cdbf-40f9-8859-ca72c1786b19
       context_mapping: {  }
     f5d5bfc4-6a03-4756-b7a5-c3ad29da3095:
@@ -20,8 +20,8 @@ variant_settings:
       status: true
       info: ''
       view_mode: full
-      region: content
-      weight: -98
+      region: header
+      weight: -3
       uuid: f5d5bfc4-6a03-4756-b7a5-c3ad29da3095
       context_mapping: {  }
     78dd02b1-c1e2-4a8a-bc31-f4b8ad7672f3:
@@ -32,7 +32,7 @@ variant_settings:
       status: true
       info: ''
       view_mode: full
-      region: content
-      weight: -97
+      region: header
+      weight: -2
       uuid: 78dd02b1-c1e2-4a8a-bc31-f4b8ad7672f3
       context_mapping: {  }
