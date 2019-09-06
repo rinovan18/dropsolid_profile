@@ -99,4 +99,20 @@ function dropsolid_demo_config_place_default_blocks($theme) {
       ]
     );
   }
+
+  if (isset($regions['doormat_02'])) {
+    Rocketship::placeBlock('system_menu_block:main', [
+        'region' => 'doormat_02',
+        'theme' => $theme->getName(),
+        'label' => 'Sitemap',
+        'provider' => 'system',
+        'label_display' => 'visible',
+        'level' => 1,
+        'depth' => 1,
+        'expand_all_items' => FALSE,
+        'status' => TRUE,
+      ]
+    );
+  }
+
 }
