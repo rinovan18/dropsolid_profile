@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies: { }
+id: dropsolid_demo_config_menu_links
+migration_group: dropsolid_demo_config_migrates
+label: 'Create homepage link'
+source:
+  constants:
+    node_uri_prefix: 'entity:node/'
+  plugin: embedded_data
+  data_rows:
+    -
+      id: 1
+      title: 'Home'
+      menu_name: main
+      link: 'internal:/'
+      weight: -99
+      expanded: 0
+  ids:
+    id:
+      type: integer
+process:
+  langcode:
+    plugin: callback
+    callable: rocketship_core_get_default_content_default_language
+  bundle:
+    plugin: default_value
+    default_value: menu_link_content
+  menu_name: menu_name
+  title: title
+  link/uri: link
+  weight: weight
+  expanded: expanded
+destination:
+  plugin: 'entity:menu_link_content'
+migration_dependencies: { }

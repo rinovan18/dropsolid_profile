@@ -8,6 +8,7 @@ use Drupal\Core\Extension\ThemeHandlerInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslationInterface;
+use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -125,12 +126,29 @@ class AssemblerForm extends FormBase {
         '#tree' => FALSE,
         '#weight' => isset($module->info['weight']) ? $module->info['weight'] : 0,
       ];
+
+      // Add a link to the FA if available.
+      if (!empty($module->info['fa_link'])) {
+        $form[$filename . '_wrapper']['extra_info_wrapper'] = [
+          '#type' => 'container',
+          '#attributes' => [
+            'style' => 'display:block;margin-top:5px;',
+          ],
+        ];
+
+        $form[$filename . '_wrapper']['extra_info_wrapper']['extra_info'] = [
+          '#title' => $this->t('Functional Analysis'),
+          '#type' => 'link',
+          '#url' => Url::fromUri($module->info['fa_link'], ['attributes' => ['target' => '_blank']]),
+        ];
+      }
+
       // Add the module itself as the first module.
       $form[$filename . '_wrapper']['extra_features'][$filename] = [
         '#type' => 'checkbox',
-        '#title' => $this->t('Core'),
+        '#title' => isset($module->info['name_override']) ? $module->info['name_override'] : $this->t('Core'),
         '#description' => $this->t($module->info['description']),
-        '#default_value' => (bool) $module->status,
+        '#default_value' => (bool) empty($module->info['prechecked']) ? $module->status : $module->info['prechecked'],
         // If already enabled at this point, don't allow them to uncheck it
         // Means it's a dependency of the profile and they can't not install
         // it anyway.
@@ -150,7 +168,7 @@ class AssemblerForm extends FormBase {
             '#type' => 'checkbox',
             '#title' => $this->t($name),
             '#description' => $this->t($info->info['description']),
-            '#default_value' => (bool) $info->status,
+            '#default_value' => (bool) empty($info->info['prechecked']) ? $info->status : $info->info['prechecked'],
             '#disabled' => (bool) $info->status,
           ];
           // Add states to these upgrades if defined.

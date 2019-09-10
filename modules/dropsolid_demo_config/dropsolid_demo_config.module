@@ -14,6 +14,7 @@ function _dropsolid_demo_config_migrates() {
     'dropsolid_demo_config_socials',
     'dropsolid_demo_config_usp_block',
     'dropsolid_demo_config_site_branding',
+    'dropsolid_demo_config_menu_links',
   ];
 }
 
