@@ -70,6 +70,23 @@ function dropsolid_rocketship_profile_install_tasks(&$install_state) {
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dropsolid_rocketship_profile_form_install_select_language_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['langcode']['#default_value'] = 'en';
+  $form['langcode']['#value'] = 'en';
+  $form['langcode']['#disabled'] = TRUE;
+
+  $form['info'] = [
+    '#type' => 'item',
+    // #markup is XSS admin filtered which ensures unsafe protocols will be
+    // removed from the url.
+    '#markup' => '<p>Rocketship is designed for a default language of English. Using the included <a target="_blank" href="https://www.drupal.org/project/disable_language">Disable Language</a> module you can restrict access to English later on, if needed.</p>',
+  ];
+}
+
+
+/**
  * Install modules.
  *
  * Wrapper around install_profile_modules to add a hide warning and status
