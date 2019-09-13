@@ -41,6 +41,8 @@ function drush_dropsolid_rocketship_drush_dropsolid_config_setup() {
 
   /** @var \Drupal\Core\Config\CachedStorage $config_storage */
   $config_storage = \Drupal::service('config.storage');
+  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+  $file_system = \Drupal::service('file_system');
 
   // Before we start ex/importing things, we need to make sure the directories
   // exist for *every* split. If this command fails half-way through it can
@@ -54,7 +56,7 @@ function drush_dropsolid_rocketship_drush_dropsolid_config_setup() {
       return;
     }
     $split_location = $split_data['folder'];
-    if (!file_prepare_directory($split_location)) {
+    if (!$file_system->prepareDirectory($split_location)) {
       drush_set_error(t(':folder is not writable.', [':folder' => $split_location]));
       return;
     }
