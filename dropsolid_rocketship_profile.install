@@ -65,10 +65,6 @@ function dropsolid_rocketship_profile_install() {
     ->set('timezone.user.default', 0)
     ->save();
 
-  // Creating CTs with config imports doesn't trigger translation table updates.
-  // @see https://www.drupal.org/project/drupal/issues/2599228
-  \Rocketship::fixTranslationConfigImportIssues('menu_link_content', 'menu_link_content');
-
   // Enable recaptcha for the basic forms.
   $form_ids = [
     'user_pass',
