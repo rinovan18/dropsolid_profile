@@ -31,7 +31,7 @@ abstract class DropsolidBrowserTestBase extends BrowserTestBase {
     parent::setUp();
 
     // Don't mind solving CAPTCHAs during test run.
-    \Drupal::service('module_installer')->uninstall(['captcha']);
+    $this->container->get('module_installer')->uninstall(['captcha']);
     // Setting a setting may be cleaner but isn't supported in Drupal 8 until
     // https://www.drupal.org/project/captcha/issues/2836076
     // \Drupal::config('captcha.settings')->set('disable_captcha', TRUE)
