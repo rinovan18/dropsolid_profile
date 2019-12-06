@@ -110,7 +110,7 @@ class AssemblerForm extends FormBase {
       ->moduleHandler
       ->loadInclude('system', 'inc', 'system.admin');
     // Sort all modules by their names.
-    $modules = system_rebuild_module_data();
+    $modules = \Drupal::service('extension.list.module')->reset()->getList();
     uasort($modules, 'system_sort_modules_by_info_name');
 
     // Set up features.

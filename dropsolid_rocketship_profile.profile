@@ -284,7 +284,7 @@ function dropsolid_rocketship_profile_install_theme($theme) {
  */
 function _dropsolid_rocketship_profile_assemble_extra_components_batch(array $modules) {
 
-  $files = system_rebuild_module_data();
+  $files = \Drupal::service('extension.list.module')->reset()->getList();
 
   // Always install required modules first. Respect the dependencies between
   // the modules.
