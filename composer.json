@@ -21,7 +21,8 @@
   ],
   "require": {
     "drupal/console": "~1.0",
-    "drupal/devel": "~1.0",
+    "drupal/devel": "~2.0",
+    "drupal/devel_php": "~2.0",
     "drupal/facets": "^1.0",
     "drupal/views_exposed_filter_blocks": "^1.0",
     "drupal/captcha": "1.0-beta1",

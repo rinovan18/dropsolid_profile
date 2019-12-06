@@ -6,6 +6,7 @@ label: Dev
 folder: ../config/splits/dev
 module:
   devel: 0
+  devel_php: 0
   dblog: 0
   field_ui: 0
   kint: 0
