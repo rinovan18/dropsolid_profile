@@ -3,12 +3,22 @@ type: module
 description: 'Contains configuration to specifically set up a Demo Site'
 core: 8.x
 package: Rocketship
-group: Demo Site
+group: 'Demo Site'
 weight: 30
 show_during_install: true
 dependencies:
-  - rocketship_core
-  - rocketship_content
-  - rocketship_paragraphs
-  - dropsolid_blocks
+  - blazy
+  - block_content
   - config_rewrite
+  - content_translation
+  - dropsolid_blocks
+  - field
+  - language
+  - link
+  - media
+  - media_library
+  - migrate_plus
+  - rocketship_content
+  - rocketship_core
+  - rocketship_paragraphs
+  - text

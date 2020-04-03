@@ -2,7 +2,12 @@ langcode: en
 status: true
 dependencies: {  }
 id: dropsolid_demo_config_images
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
 migration_group: dropsolid_demo_config_migrates
+label: null
 source:
   plugin: csv
   path: /assets/csv/images.csv
@@ -10,7 +15,7 @@ source:
   keys:
     - id
   constants:
-    source_base_path: '/assets/images/'
+    source_base_path: /assets/images/
     target_base_path: 'public://'
 process:
   _source_full_path:

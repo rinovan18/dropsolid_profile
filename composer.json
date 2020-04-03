@@ -57,8 +57,6 @@
     "drupal/rocketship_core": "3.x-dev",
     "drupal/rocketship_paragraphs": "3.x-dev",
     "drupal/r4032login": "^1.0",
-    "drupal/embed": "^1.0",
-    "drupal/entity_embed": "^1.0",
     "drupal/menu_link_attributes": "^1.0"
   },
   "support": {

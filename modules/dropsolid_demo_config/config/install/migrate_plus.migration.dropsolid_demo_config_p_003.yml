@@ -1,9 +1,16 @@
+langcode: en
+status: true
 dependencies:
   enforced:
     module:
       - rocketship_paragraphs
 id: dropsolid_demo_config_p_003
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
 migration_group: dropsolid_demo_config_migrates
+label: null
 source:
   plugin: csv
   path: /assets/csv/p_003.csv
@@ -31,15 +38,15 @@ process:
   field_p_teaser: field_p_teaser
   field_p_title: field_p_title
   field_p_003_view_mode: field_p_003_view_mode
-  'field_p_text/value':
+  field_p_text/value:
     plugin: token_replacer
     source: field_p_text
-  'field_p_text/format':
+  field_p_text/format:
     plugin: default_value
     default_value: full_html
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   default_bundle: p_003
 migration_dependencies:
-  required: {}
-  optional: {}
+  required: {  }
+  optional: {  }

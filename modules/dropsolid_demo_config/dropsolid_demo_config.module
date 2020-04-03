@@ -8,6 +8,7 @@
 function _dropsolid_demo_config_migrates() {
   return [
     'dropsolid_demo_config_images',
+    'dropsolid_demo_config_media_images',
     'dropsolid_demo_config_p_002',
     'dropsolid_demo_config_p_003',
     'dropsolid_demo_config_blocks',

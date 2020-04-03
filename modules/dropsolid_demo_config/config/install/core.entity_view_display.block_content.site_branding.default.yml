@@ -4,7 +4,8 @@ dependencies:
   config:
     - block_content.type.site_branding
     - field.field.block_content.site_branding.body
-    - field.field.block_content.site_branding.field_info_image
+    - field.field.block_content.site_branding.field_media_info_image
+    - image.style.image_style_scale_width_xs
   module:
     - blazy
     - text
@@ -20,60 +21,47 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_info_image:
+  field_media_info_image:
+    type: blazy_media
     weight: 0
     label: hidden
     settings:
       image_style: image_style_scale_width_xs
-      thumbnail_style: ''
       responsive_image_style: ''
       media_switch: ''
       box_style: ''
-      box_caption: ''
-      box_caption_custom: ''
+      thumbnail_style: ''
+      box_media_style: ''
       ratio: ''
-      sizes: ''
-      breakpoints:
-        xs:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        sm:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        md:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        lg:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        xl:
-          image_style: ''
-          width: ''
-          breakpoint: ''
+      box_caption: ''
+      view_mode: default
+      box_caption_custom: ''
       current_view_mode: default
       background: false
       caption:
         title: '0'
         alt: '0'
-      iframe_lazy: true
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
       icon: ''
       layout: ''
-      view_mode: ''
       cache: 0
-      optionset: default
       skin: ''
+      fx: ''
       style: ''
-      box_media_style: ''
-      grid: 0
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
       grid_header: ''
+      grid: 0
       grid_medium: 0
       grid_small: 0
     third_party_settings: {  }
-    type: blazy
     region: content
 hidden:
   langcode: true

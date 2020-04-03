@@ -1,9 +1,16 @@
+langcode: en
+status: true
 dependencies:
   enforced:
     module:
       - rocketship_paragraphs
 id: dropsolid_demo_config_p_002
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
 migration_group: dropsolid_demo_config_migrates
+label: null
 source:
   plugin: csv
   path: /assets/csv/p_002.csv
@@ -19,12 +26,12 @@ process:
     plugin: migration_lookup
     migration: dropsolid_demo_config_images
     source: field_p_image
-  'field_p_link/title': field_p_link_title
-  'field_p_link/uri': field_p_link_uri
+  field_p_link/title: field_p_link_title
+  field_p_link/uri: field_p_link_uri
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   default_bundle: p_002
 migration_dependencies:
   required:
     - dropsolid_demo_config_images
-  optional: {}
+  optional: {  }
