@@ -9,6 +9,7 @@ dependencies:
   - environment_indicator:environment_indicator
   - drupal:system
   - drupal:action
+  - blazy:blazy
   - drupal:user
   - drupal:node
   - drupal:block

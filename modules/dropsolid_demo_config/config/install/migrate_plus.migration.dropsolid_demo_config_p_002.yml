@@ -22,10 +22,10 @@ process:
     plugin: callback
     callable: rocketship_core_get_default_content_default_language
   field_p_002_layout_image: field_p_002_layout_image
-  field_p_image:
+  field_p_media_image:
     plugin: migration_lookup
     migration: dropsolid_demo_config_images
-    source: field_p_image
+    source: field_p_media_image
   field_p_link/title: field_p_link_title
   field_p_link/uri: field_p_link_uri
 destination:
