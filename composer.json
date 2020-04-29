@@ -48,7 +48,6 @@
     "drupal/geofield_map": "~2.13",
     "drupal/address": "^1.4",
     "drupal/webform_views": "^5.0@alpha",
-    "drupal/display_field_copy": "^1.0",
     "drupal/disable_language": "^1.0@beta",
     "drupal/office_hours": "^1.1",
     "drupal/imageapi_optimize": "^2.0",
