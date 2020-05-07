@@ -4,6 +4,7 @@ namespace Drupal\dropsolid_rocketship_profile\Form;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Installer\Form\SiteConfigureForm;
+use Drupal\user\UserInterface;
 
 /**
  * Provides the site configuration form.
@@ -77,7 +78,7 @@ class RocketshipSiteConfigureForm extends SiteConfigureForm {
     $form['admin_account']['account']['name'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Username'),
-      '#maxlength' => USERNAME_MAX_LENGTH,
+      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
       '#description' => $this->t("Several special characters are allowed, including space, period (.), hyphen (-), apostrophe ('), underscore (_), and the @ sign."),
       '#required' => TRUE,
       '#attributes' => ['class' => ['username']],
