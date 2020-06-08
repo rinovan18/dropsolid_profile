@@ -1,7 +1,7 @@
 name: 'Dropsolid Rocketship Drush'
 type: module
 description: 'Contains helpful, Rocketship-specific drush commands'
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 package: Rocketship
 dependencies:
   - config_split
