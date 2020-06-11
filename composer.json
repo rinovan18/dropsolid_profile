@@ -74,7 +74,6 @@
         "Incorrect translation status for duplicated entities. -- https://www.drupal.org/project/drupal/issues/3009016#comment-12828375": "https://www.drupal.org/files/issues/2018-10-25/3009016-6.patch",
         "Media entities should not have path alias by default - https://www.drupal.org/project/drupal/issues/3067944": "https://www.drupal.org/files/issues/2019-07-15/drupal.3067944.2.patch",
         "https://www.drupal.org/files/issues/2020-01-07/2796399-24.patch": "https://www.drupal.org/files/issues/2020-01-07/2796399-24.patch",
-        "https://www.drupal.org/files/issues/2020-02-04/layout-builder-save-issue-3045171-140.patch": "https://www.drupal.org/files/issues/2020-02-04/layout-builder-save-issue-3045171-140.patch",
         "Upload via Media Library field widget does not take all upload validators in account": "https://www.drupal.org/files/issues/2019-12-11/media_library---file---upload_form_not_getting_populated_with_image_size_validators-3008292-8.7.x.patch"
       },
       "drupal/purge": {
