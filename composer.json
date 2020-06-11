@@ -70,7 +70,7 @@
         "Allow states to check and uncheck checkboxes and radio buttons": "https://www.drupal.org/files/issues/drupal-994360-74-states-checkboxes-checked.patch",
         "Allow Views pages to be marked as admin page": "https://www.drupal.org/files/issues/2018-09-01/2719797-69.patch",
         "Fix datetime widget descriptions": "https://www.drupal.org/files/issues/2019-03-16/2791693-38.patch",
-        "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch".
+        "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch",
         "Incorrect translation status for duplicated entities. -- https://www.drupal.org/project/drupal/issues/3009016#comment-12828375": "https://www.drupal.org/files/issues/2018-10-25/3009016-6.patch",
         "Media entities should not have path alias by default - https://www.drupal.org/project/drupal/issues/3067944": "https://www.drupal.org/files/issues/2019-07-15/drupal.3067944.2.patch",
         "https://www.drupal.org/files/issues/2020-01-07/2796399-24.patch": "https://www.drupal.org/files/issues/2020-01-07/2796399-24.patch",
