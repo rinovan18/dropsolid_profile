@@ -28,6 +28,13 @@ function dropsolid_rocketship_drush_drush_command() {
  * Run first time setup of the configuration management system.
  */
 function drush_dropsolid_rocketship_drush_dropsolid_config_setup() {
+  // Make sure our settings files have been included. If not, d-set can
+  // break config pretty easily if there's no overrides to properly (de)activate
+  // config splits.
+  if (!defined('ROCKETSHIP_PROJECT_ENVIRONMENT')) {
+    drush_set_error("It seems Rocketship's additional settings file for this environment has not yet been included. \nEnsure the correct additional_settings file in etc/drupal has been included, see the readme file at readme/after-install/readme.md for more information.");
+    return;
+  }
   $default_langcode = \Drupal::languageManager()
     ->getDefaultLanguage()
     ->getId();
