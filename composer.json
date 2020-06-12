@@ -57,7 +57,7 @@
     "drupal/rocketship_paragraphs": "^5.0@alpha",
     "drupal/r4032login": "^1.0",
     "drupal/menu_link_attributes": "^1.0",
-    "drupal/lb_ux": "1.0@beta",
+    "drupal/lb_ux": "^1.0@beta",
     "drupal/layout_builder_modal": "^1.1"
   },
   "support": {
