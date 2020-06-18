@@ -88,7 +88,8 @@
         "https://www.drupal.org/project/r4032login/issues/3065998": "https://www.drupal.org/files/issues/2019-07-05/r4032login.3065998.add-307-temp-redirect-option.patch"
       },
       "drupal/lb_ux": {
-          "Errors when using with modules that alter a section's contextual menu": "https://www.drupal.org/files/issues/2020-05-22/3106939-4.patch"
+          "Errors when using with modules that alter a section's contextual menu": "https://www.drupal.org/files/issues/2020-05-22/3106939-4.patch",
+          "Show contextual cog when content preview is disabled": "https://www.drupal.org/files/issues/2020-05-22/3116402-8.patch"
       }
     }
   }
