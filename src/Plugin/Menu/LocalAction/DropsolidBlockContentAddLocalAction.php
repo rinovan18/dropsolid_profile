@@ -20,7 +20,7 @@ class DropsolidBlockContentAddLocalAction extends BlockContentAddLocalAction {
     // Adds a destination on our own custom block listing under admin/content.
     // Else the redirect goes to instance creation.
     if ($route_match->getRouteName() == 'view.dropsolid_content_block_library.page_1') {
-      $options['query']['destination'] = Url::fromRoute('<current>');
+      $options['query']['destination'] = Url::fromRoute('<current>')->toString();
     }
     return $options;
   }
