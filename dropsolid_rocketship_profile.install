@@ -80,4 +80,15 @@ function dropsolid_rocketship_profile_install() {
     }
   }
 
+  // Create redirect from /admin/structure/block/block-content to
+  // /admin/content/blocks because after editing or adding a translation
+  // that's the standard redirect.
+  /** @var \Drupal\redirect\Entity\Redirect $redirect */
+  $redirect = \Drupal\redirect\Entity\Redirect::create();
+  $redirect->setSource('admin/structure/block/block-content');
+  $redirect->setRedirect('admin/content/blocks');
+  $redirect->setStatusCode(301);
+  $redirect->setLanguage(\Drupal\Core\Language\Language::LANGCODE_NOT_SPECIFIED);
+  $redirect->save();
+
 }

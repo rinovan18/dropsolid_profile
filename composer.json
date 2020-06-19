@@ -55,7 +55,9 @@
     "drupal/r4032login": "^1.0",
     "drupal/menu_link_attributes": "^1.0",
     "drupal/lb_ux": "^1.0",
-    "drupal/layout_builder_modal": "^1.1"
+    "drupal/layout_builder_modal": "^1.1",
+    "drupal/redirect": "^1.6",
+    "drupal/block_content_permissions": "^1.9"
   },
   "support": {
     "docs": "https://drupal.org/project/dropsolid_rocketship_profile"
