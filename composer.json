@@ -76,7 +76,7 @@
         "Upload via Media Library field widget does not take all upload validators in account": "https://www.drupal.org/files/issues/2019-12-11/media_library---file---upload_form_not_getting_populated_with_image_size_validators-3008292-8.7.x.patch"
       },
       "drupal/purge": {
-        "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2019-03-06/3008776.add-priority-to-needs_destruct.patch"
+        "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2020-06-19/3008776.add-priority-to-needs_destruct.8.patch"
       },
       "drupal/facets": {
         "Hide facets when it is configured to hide the block - https://www.drupal.org/node/2984465": "https://www.drupal.org/files/issues/2019-04-08/facets-empty-block-2984465-26.patch"
