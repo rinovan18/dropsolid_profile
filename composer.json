@@ -77,7 +77,9 @@
         "https://www.drupal.org/files/issues/2020-01-07/2796399-24.patch": "https://www.drupal.org/files/issues/2020-01-07/2796399-24.patch",
         "Upload via Media Library field widget does not take all upload validators in account": "https://www.drupal.org/files/issues/2019-12-11/media_library---file---upload_form_not_getting_populated_with_image_size_validators-3008292-8.7.x.patch",
         "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-02-22/contextual_links_layout_builder_0.patch",
-          "Plugin blocks cannot set their own attributes when put in the layout\n": "https://www.drupal.org/files/issues/2020-04-11/plugin-block-attributes-fix-3077734-13.patch"
+        "Plugin blocks cannot set their own attributes when put in the layout": "https://www.drupal.org/files/issues/2020-04-11/plugin-block-attributes-fix-3077734-13.patch",
+        "Use title block when show title is selected for field blocks": "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch",
+        "Allow synced Layout default Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2020-06-22/3044993-12_plus_2946333-164-rerolled89x-19.patch"
       },
       "drupal/purge": {
         "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2020-06-19/3008776.add-priority-to-needs_destruct.8.patch"
