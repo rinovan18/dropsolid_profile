@@ -7,7 +7,7 @@ dependencies:
   module:
     - block_content
     - user
-id: dropsolid_content_block_library
+id: rocketship_content_block_library
 label: 'Rocketship Content Block Library'
 module: views
 description: 'Find and manage custom blocks.'

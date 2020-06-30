@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-id: dropsolid_demo_config_migrates
+id: rocketship_demo_config_migrates
 label: 'Dropsolid Demo Config Migrates'
 description: 'Contains page migration to be used as an overview'
 source_type: ''

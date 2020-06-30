@@ -11,7 +11,7 @@ dependencies:
   - block_content
   - config_rewrite
   - content_translation
-  - dropsolid_blocks
+  - rocketship_blocks
   - field
   - language
   - link

@@ -7,9 +7,9 @@ use Drupal\migrate\MigrateExecutable;
 /**
  * Implements hook_install().
  */
-function dropsolid_demo_config_install() {
+function rocketship_demo_config_install() {
 
-  $migrations = _dropsolid_demo_config_migrates();
+  $migrations = _rocketship_demo_config_migrates();
 
   $migrationManager = \Drupal::service('plugin.manager.migration');
   try {
@@ -31,7 +31,7 @@ function dropsolid_demo_config_install() {
     /** @var \Drupal\Core\Extension\ThemeHandlerInterface $handler */
     $handler = Drupal::service('theme_handler');
     $info = $handler->getTheme($theme);
-    dropsolid_demo_config_place_default_blocks($info);
+    rocketship_demo_config_place_default_blocks($info);
 
     // Add blocks to frontpage.
     $node = Rocketship::loadMigratedFrontpageNode();
@@ -109,9 +109,9 @@ function dropsolid_demo_config_install() {
 /**
  * Implements hook_uninstall().
  */
-function dropsolid_demo_config_uninstall() {
+function rocketship_demo_config_uninstall() {
 
-  $migrations = _dropsolid_demo_config_migrates();
+  $migrations = _rocketship_demo_config_migrates();
   $migrations = array_reverse($migrations);
 
   $migrationManager = \Drupal::service('plugin.manager.migration');

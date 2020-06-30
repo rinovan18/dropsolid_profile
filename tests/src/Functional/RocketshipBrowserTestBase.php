@@ -8,7 +8,7 @@ use Drupal\user\Entity\User;
 /**
  * Test base that provides Dropsolid install profile specific things.
  */
-abstract class DropsolidBrowserTestBase extends BrowserTestBase {
+abstract class RocketshipBrowserTestBase extends BrowserTestBase {
 
   /**
    * Something wrong with search_api_db test config, we think.

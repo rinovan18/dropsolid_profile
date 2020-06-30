@@ -5,16 +5,16 @@ namespace Drupal\Tests\dropsolid_rocketship_profile\Functional;
 /**
  * Test the redirect of the Admin block overview page.
  *
- * @group dropsolid_blocks
- * @group dropsolid
+ * @group rocketship_blocks
+ * @group rocketship
  */
-class AdminBlocksRedirectTest extends DropsolidBrowserTestBase {
+class AdminBlocksRedirectTest extends RocketshipBrowserTestBase {
 
   /**
    * {@inheritdoc}
    */
   protected static $modules = [
-    'dropsolid_blocks',
+    'rocketship_blocks',
   ];
 
   /**

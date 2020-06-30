@@ -13,9 +13,9 @@ dependencies:
   - drupal:user
   - drupal:node
   - drupal:block
-  - drupal:imageapi_optimize
-  - drupal:imageapi_optimize_binaries
-  - drupal:imageapi_optimize_resmushit
+  - imageapi_optimize:imageapi_optimize
+  - imageapi_optimize_binaries:imageapi_optimize_binaries
+  - imageapi_optimize_resmushit:imageapi_optimize_resmushit
   - recaptcha:recaptcha
   - r4032login:r4032login
   - drupal:media_library

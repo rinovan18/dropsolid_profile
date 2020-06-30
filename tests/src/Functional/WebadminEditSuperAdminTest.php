@@ -6,10 +6,10 @@ namespace Drupal\Tests\dropsolid_rocketship_profile\Functional;
  * Test to check that a webadmin-user CANNOT create superadmins.
  *
  * @group dropsolid_rocketship_profile
- * @group dropsolid
+ * @group rocketship
  * @group security
  */
-class WebadminEditSuperAdminTest extends DropsolidBrowserTestBase {
+class WebadminEditSuperAdminTest extends RocketshipBrowserTestBase {
 
   /**
    * Tests that the webadmin can not edit the super admin.
