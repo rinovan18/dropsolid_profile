@@ -63,22 +63,6 @@
   },
   "extra": {
     "patches": {
-      "drupal/core": {
-        "Support priority for needs_destruction service tag": "https://www.drupal.org/files/issues/2019-03-06/support-priority-for-need_destruction-tag.patch",
-        "Toolbar's renderPlain() is incompatible with dynamic page cache": "https://www.drupal.org/files/issues/2020-04-24/2949457-53.patch",
-        "Exposed term filter is not updated when terms are added, deleted, or rearranged  https://www.drupal.org/project/drupal/issues/2900248": "https://www.drupal.org/files/issues/2019-05-07/2900248-16.patch",
-        "Allow states to check and uncheck checkboxes and radio buttons": "https://www.drupal.org/files/issues/drupal-994360-74-states-checkboxes-checked.patch",
-        "Allow Views pages to be marked as admin page": "https://www.drupal.org/files/issues/2018-09-01/2719797-69.patch",
-        "Fix datetime widget descriptions": "https://www.drupal.org/files/issues/2019-03-16/2791693-38.patch",
-        "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch",
-        "Incorrect translation status for duplicated entities. -- https://www.drupal.org/project/drupal/issues/3009016#comment-12828375": "https://www.drupal.org/files/issues/2018-10-25/3009016-6.patch",
-        "Media entities should not have path alias by default - https://www.drupal.org/project/drupal/issues/3067944": "https://www.drupal.org/files/issues/2019-07-15/drupal.3067944.2.patch",
-        "https://www.drupal.org/files/issues/2020-01-07/2796399-24.patch": "https://www.drupal.org/files/issues/2020-01-07/2796399-24.patch",
-        "Upload via Media Library field widget does not take all upload validators in account": "https://www.drupal.org/files/issues/2019-12-11/media_library---file---upload_form_not_getting_populated_with_image_size_validators-3008292-8.7.x.patch",
-        "Use title block when show title is selected for field blocks": "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch",
-        "Allow synced Layout default Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2020-06-25/3044993-12_plus_2946333-164-rerolled89x-29.patch",
-        "Combo patch: issue 3077734 and 3020876": "https://www.drupal.org/files/issues/2020-06-22/contextual_links_attributes_combo.patch"
-      },
       "drupal/purge": {
         "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2020-06-19/3008776.add-priority-to-needs_destruct.8.patch"
       },
