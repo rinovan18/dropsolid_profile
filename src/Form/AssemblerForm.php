@@ -202,8 +202,8 @@ class AssemblerForm extends FormBase {
         continue;
       }
       $form['theme_wrapper']['theme']['#options'][$filename] = $theme->info['name'] . '<br/><div class="description">' . $theme->info['description'] . '</div>';
-      if ($filename == 'dropsolid_starter') {
-        $form['theme_wrapper']['theme']['#default_value'] = 'dropsolid_starter';
+      if ($filename == 'rocketship_theme_starter') {
+        $form['theme_wrapper']['theme']['#default_value'] = 'rocketship_theme_starter';
       }
     }
 

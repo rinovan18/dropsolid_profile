@@ -55,7 +55,8 @@
     "drupal/menu_link_attributes": "^1.0",
     "drupal/redirect": "^1.6",
     "drupal/block_content_permissions": "^1.9",
-    "drupal/critical_css": "^1.16"
+    "drupal/critical_css": "^1.16",
+    "drupal/seckit": "^2.0"
   },
   "support": {
     "docs": "https://drupal.org/project/dropsolid_rocketship_profile"

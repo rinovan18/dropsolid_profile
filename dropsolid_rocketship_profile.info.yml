@@ -23,6 +23,7 @@ dependencies:
   - drupal:layout_builder
   - redirect:redirect
   - block_content_permissions:block_content_permissions
+  - seckit:seckit
 themes:
   - bartik
   - seven
