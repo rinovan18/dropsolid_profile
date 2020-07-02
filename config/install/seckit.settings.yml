@@ -45,7 +45,7 @@ seckit_ct:
   enforce: false
 seckit_fp:
   feature_policy: true
-  feature_policy_policy: 'battery ''none'''
+  feature_policy_policy: 'battery ''none''; camera ''none''; microphone ''none'';'
 seckit_various:
   from_origin: false
   from_origin_destination: same
