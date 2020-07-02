@@ -43,7 +43,7 @@ function rocketship_demo_config_install() {
       if (isset($sections[0]) && $sections[0]->getLayoutId() === 'rs_header') {
 
         $section_configuration = $sections[0]->getLayoutSettings();
-        $section_configuration['classes'] = $section_configuration['classes'] ?? [];
+        $section_configuration['classes'] = $section_configuration['classes'] ?? '';
         $section_configuration['classes'] .= " home__section home__section--visual";
         $sections[0]->setLayoutSettings($section_configuration);
 
@@ -65,7 +65,7 @@ function rocketship_demo_config_install() {
       if (isset($sections[1]) && $sections[1]->getLayoutId() === 'rs_two_col') {
 
         $section_configuration = $sections[1]->getLayoutSettings();
-        $section_configuration['classes'] = $section_configuration['classes'] ?? [];
+        $section_configuration['classes'] = $section_configuration['classes'] ?? '';
         $section_configuration['classes'] .= " home__section home__section--usp-info";
         $sections[1]->setLayoutSettings($section_configuration);
 
