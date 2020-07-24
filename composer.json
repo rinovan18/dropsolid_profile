@@ -77,9 +77,6 @@
       "drupal/purge": {
         "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2019-03-06/3008776.add-priority-to-needs_destruct.patch"
       },
-      "drupal/facets": {
-        "Hide facets when it is configured to hide the block - https://www.drupal.org/node/2984465": "https://www.drupal.org/files/issues/2019-04-08/facets-empty-block-2984465-26.patch"
-      },
       "drupal/r4032login": {
         "Add cache tags to redirect": "https://www.drupal.org/files/issues/2019-03-13/2941064-20.patch",
         "https://www.drupal.org/project/r4032login/issues/3065998": "https://www.drupal.org/files/issues/2019-07-05/r4032login.3065998.add-307-temp-redirect-option.patch"
