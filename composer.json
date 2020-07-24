@@ -67,7 +67,6 @@
       "drupal/core": {
         "Support priority for needs_destruction service tag": "https://www.drupal.org/files/issues/2019-03-06/support-priority-for-need_destruction-tag.patch",
         "Toolbar's renderPlain() is incompatible with dynamic page cache": "https://www.drupal.org/files/issues/2019-11-25/2949457-43.patch",
-        "Contextual links can't handle multiple occurrences of the same contextual links (again) https://www.drupal.org/project/drupal/issues/2891603": "https://www.drupal.org/files/issues/2018-10-18/2891603.16.patch",
         "Exposed term filter is not updated when terms are added, deleted, or rearranged  https://www.drupal.org/project/drupal/issues/2900248": "https://www.drupal.org/files/issues/2019-05-07/2900248-16.patch",
         "Allow states to check and uncheck checkboxes and radio buttons": "https://www.drupal.org/files/issues/drupal-994360-74-states-checkboxes-checked.patch",
         "Allow Views pages to be marked as admin page": "https://www.drupal.org/files/issues/2018-09-01/2719797-69.patch",
