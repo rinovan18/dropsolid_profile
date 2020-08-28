@@ -13,4 +13,3 @@ permissions:
   - 'userprotect.account.edit'
   - 'userprotect.mail.edit'
   - 'userprotect.pass.edit'
-  - 'view own unpublished content'
