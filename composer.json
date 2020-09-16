@@ -33,7 +33,6 @@
     "drupal/memcache": "^2.1",
     "drupal/dropsolid_purge": "^1.0",
     "drupal/purge": "^3.0",
-    "drupal/webform_mailchimp": "^5.9",
     "drupal/twig_xdebug": "^1.2",
     "drupal/rabbit_hole": "^1.0",
     "drupal/chosen": "^2.9",
