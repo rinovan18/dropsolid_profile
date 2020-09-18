@@ -11,8 +11,8 @@ label: null
 source:
   plugin: csv
   path: /assets/csv/images.csv
-  header_row_count: 1
-  keys:
+  header_offset: 0
+  ids:
     - id
 process:
   name: name
