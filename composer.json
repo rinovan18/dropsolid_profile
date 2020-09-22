@@ -27,7 +27,7 @@
     "drupal/views_exposed_filter_blocks": "^1.1",
     "drupal/captcha": "^1.1",
     "drupal/recaptcha": "^3.0",
-    "drupal/field_hidden": "^1.0",
+    "drupal/field_hidden": "^2.0",
     "drupal/reroute_email": "^1.2",
     "drupal/environment_indicator": "^4.0",
     "drupal/memcache": "^2.1",

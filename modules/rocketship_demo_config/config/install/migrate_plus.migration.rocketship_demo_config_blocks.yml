@@ -35,7 +35,7 @@ process:
         - rocketship_demo_config_p_003
       no_stub: true
     -
-      plugin: iterator
+      plugin: sub_process
       process:
         target_id: '0'
         target_revision_id: '1'
