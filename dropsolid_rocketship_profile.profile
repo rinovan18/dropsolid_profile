@@ -389,7 +389,7 @@ function dropsolid_after_install_finished(array &$install_state) {
           '</strong></p>', []),
       ],
       'drush' => [
-        '#markup' => new FormattableMarkup('<pre><code style="background-color: #444040; color: #ffffff;display:block;padding:20px;">../vendor/bin/drush d-set</code></pre>', []),
+        '#markup' => new FormattableMarkup('<pre><code style="background-color: #444040; color: #ffffff;display:block;padding:20px;">drush d-set</code></pre>', []),
       ],
     ],
     'messages' => [
