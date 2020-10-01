@@ -154,10 +154,7 @@ class DropsolidRocketshipCommands extends DrushCommands implements ProcessManage
    *
    * @command rocketship:single-import
    *
-   * @option file A path to a configuration file to import
-   *
-   * @usage rocketship:single-import --file=<file>
-   *   Import single configuration file
+   * @usage rocketship:single-import <file>
    *
    * @validate-module-enabled dropsolid_rocketship_drush
    *
