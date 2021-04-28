@@ -65,9 +65,6 @@
     "patches": {
       "drupal/purge": {
         "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2020-06-19/3008776.add-priority-to-needs_destruct.8.patch"
-      },
-      "drupal/r4032login": {
-        "Add cache tags to redirect": "https://www.drupal.org/files/issues/2020-10-12/2941064-44-complete.patch"
       }
     }
   }
