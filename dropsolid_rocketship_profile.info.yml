@@ -20,7 +20,7 @@ dependencies:
   - simple_recaptcha:simple_recaptcha
   - r4032login:r4032login
   - drupal:media_library
-  - menu_link_attributes:menu_link_attributes
+  - link_attributes:link_attributes
   - drupal:layout_builder
   - redirect:redirect
   - block_content_permissions:block_content_permissions

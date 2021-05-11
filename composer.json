@@ -49,7 +49,7 @@
     "drupal/imageapi_optimize_resmushit": "^2.0",
     "drupal/rocketship_core": "^5.0",
     "drupal/r4032login": "^2.0",
-    "drupal/menu_link_attributes": "^1.1",
+    "drupal/link_attributes": "^1.1",
     "drupal/redirect": "^1.6",
     "drupal/block_content_permissions": "^1.10",
     "drupal/critical_css": "^1.16",
