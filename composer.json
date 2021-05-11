@@ -56,7 +56,8 @@
     "drupal/seckit": "^2.0",
     "drupal/path_redirect_import": "^1.0",
     "drupal/unified_twig_ext": "^1.0",
-    "kint-php/kint": "^3.3"
+    "kint-php/kint": "^3.3",
+    "drupal/http_cache_control": "~2.0"
   },
   "support": {
     "docs": "https://drupal.org/project/dropsolid_rocketship_profile"
