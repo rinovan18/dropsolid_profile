@@ -5,9 +5,8 @@ ignored_config_entities:
   3: simple_sitemap.custom_links.default
   4: ~webform.webform.event_subscription
   5: ~webform.webform.apply_for_this_job
-  6: recaptcha.settings
+  6: simple_recaptcha.config
   7: ~webform.webform.office_contact
   8: google_tag*
   9: geofield_map.settings
   10: geocoder.settings
-  11: recaptcha.settings

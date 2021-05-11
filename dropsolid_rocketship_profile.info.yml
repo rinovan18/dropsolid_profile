@@ -16,7 +16,7 @@ dependencies:
   - imageapi_optimize:imageapi_optimize
   - imageapi_optimize_binaries:imageapi_optimize_binaries
   - imageapi_optimize_resmushit:imageapi_optimize_resmushit
-  - recaptcha:recaptcha
+  - simple_recaptcha:simple_recaptcha
   - r4032login:r4032login
   - drupal:media_library
   - menu_link_attributes:menu_link_attributes
