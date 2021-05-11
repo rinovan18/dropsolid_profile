@@ -25,6 +25,7 @@ dependencies:
   - redirect:redirect
   - block_content_permissions:block_content_permissions
   - seckit:seckit
+  - http_cache_control:http_cache_control
 themes:
   - bartik
   - seven
