@@ -13,6 +13,7 @@ dependencies:
   - drupal:user
   - drupal:node
   - drupal:block
+  - drupal:page_cache
   - imageapi_optimize:imageapi_optimize
   - imageapi_optimize_binaries:imageapi_optimize_binaries
   - imageapi_optimize_resmushit:imageapi_optimize_resmushit
