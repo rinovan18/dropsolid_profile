@@ -65,21 +65,6 @@ function dropsolid_rocketship_profile_install() {
     ->set('timezone.user.default', 0)
     ->save();
 
-  // Enable recaptcha for the basic forms.
-  $form_ids = [
-    'user_pass',
-    'user_register_form',
-    'user_login_form',
-  ];
-
-  foreach ($form_ids as $id) {
-    $captchaPoint = CaptchaPoint::load($id);
-    if ($captchaPoint) {
-      $captchaPoint->enable();
-      $captchaPoint->save();
-    }
-  }
-
   // Create redirect from /admin/structure/block/block-content to
   // /admin/content/blocks because after editing or adding a translation
   // that's the standard redirect.
