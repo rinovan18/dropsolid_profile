@@ -13,7 +13,6 @@ dependencies:
   - drupal:user
   - drupal:node
   - drupal:block
-  - drupal:page_cache
   - imageapi_optimize:imageapi_optimize
   - imageapi_optimize_binaries:imageapi_optimize_binaries
   - imageapi_optimize_resmushit:imageapi_optimize_resmushit
@@ -27,9 +26,13 @@ dependencies:
   - seckit:seckit
   - http_cache_control:http_cache_control
   - config_import_locale:config_import_locale
+install:
+  - drupal:page_cache
+  - drupal:dblog
 themes:
   - bartik
   - seven
 package: Rocketship
-distribution:
-  name: 'Dropsolid Rocketship Profile'
+#distribution:
+#  name: 'Dropsolid Rocketship Profile'
+#  langcode: en
