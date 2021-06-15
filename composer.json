@@ -47,7 +47,7 @@
     "drupal/imageapi_optimize": "^4.0",
     "drupal/imageapi_optimize_binaries": "^1.0",
     "drupal/imageapi_optimize_resmushit": "^2.0",
-    "drupal/rocketship_core": "^5.0",
+    "drupal/rocketship_core": "^6.0",
     "drupal/r4032login": "^2.0",
     "drupal/link_attributes": "^1.1",
     "drupal/redirect": "^1.6",
