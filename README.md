@@ -35,7 +35,7 @@ so give them a look: https://www.drupal.org/project/varbase
     - see config/install webadmin.yml for all permissions
 - has extra permissions related modules:
     - userprotect
-    - role_delegation
+    - roleassign
     - block_content_permissions
     - taxonomy_access_fix
 - has config ignore and splits for each environment ready to go. Don't forget

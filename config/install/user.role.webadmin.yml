@@ -14,6 +14,7 @@ permissions:
   - 'access toolbar'
   - 'administer nodes'
   - 'administer users'
+  - 'assign roles'
   - 'assign webadmin role'
   - 'change own username'
   - 'create content translations'
