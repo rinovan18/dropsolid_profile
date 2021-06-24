@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - system.menu.admin
     - user.role.administrator
     - user.role.webadmin
   module:
@@ -638,11 +639,11 @@ display:
         metatag_display_extender: {  }
       path: admin/content/blocks
       menu:
-        type: tab
+        type: normal
         title: Blocks
         description: ''
         expanded: false
-        parent: ''
+        parent: system.admin_content
         weight: 0
         context: '0'
         menu_name: admin
