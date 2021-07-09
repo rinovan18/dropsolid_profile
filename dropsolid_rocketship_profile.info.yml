@@ -29,6 +29,7 @@ install:
   - imageapi_optimize_binaries:imageapi_optimize_binaries
   - imageapi_optimize_resmushit:imageapi_optimize_resmushit
   - seckit:seckit
+  - config_import_single:config_import_single
 themes:
   - bartik
   - seven
