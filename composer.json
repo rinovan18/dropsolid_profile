@@ -20,7 +20,6 @@
     }
   ],
   "require": {
-    "drupal/console": "~1.0",
     "drupal/devel": "^4.0",
     "drupal/devel_php": "^1.2",
     "drupal/facets": "^1.4",
